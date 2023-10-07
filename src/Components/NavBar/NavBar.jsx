@@ -1,22 +1,68 @@
-import { NavLink } from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
+import { FaUserCircle } from 'react-icons/fa'
 const NavBar = () => {
-  const navLink = (
+  const navLink =
     <>
       <li>
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-red-600 underline font-bold" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-red-600 underline font-extrabold"
+              : ""
           }
         >
           Home
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/about"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-red-600 underline font-extrabold"
+              : ""
+          }
+        >
+          AboutUs
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/blog"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-red-600 underline font-extrabold"
+              : ""
+          }
+        >
+          Blog
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/contact"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-red-600 underline font-extrabold"
+              : ""
+          }
+        >
+          Contact
+        </NavLink>
+      </li>
     </>
-  );
+
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar pt-5">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -37,18 +83,21 @@ const NavBar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 font-bold shadow bg-base-100 rounded-box w-52"
           >
             {navLink}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a className="normal-case"><img className="h-16" src="https://i.ibb.co/rp2Jymq/logo-8.png" alt="" /></a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLink}</ul>
+        <ul className="menu menu-horizontal font-bold px-1">{navLink}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end gap-2">
+       <div className="text-3xl"><FaUserCircle></FaUserCircle></div>
+        <Link className="btn bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 hover:to-yellow-500 shadow-lg shadow-blue-600/50 text-white" to="/login">
+          LogIn
+        </Link>
       </div>
     </div>
   );

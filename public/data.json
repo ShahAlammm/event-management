@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "image": "product1.jpg",
+      "title": "Modern Desk Chair",
+      "text": "Ergonomic design for maximum comfort.",
+      "animation": "slide-in",
+      "style": "fade-down",
+      "details": "Adjustable height, 360-degree swivel.",
+      "price-range": "$50 - $100"
+    },
+    {
+      "id": 2,
+      "image": "product2.jpg",
+      "title": "Smartphone Stand",
+      "text": "Stylish holder for your mobile devices.",
+      "animation": "fade-in",
+      "style": "fade-down",
+      "details": "Compatible with various phone sizes.",
+      "price-range": "$10 - $20"
+    },
+    {
+      "id": 3,
+      "image": "product3.jpg",
+      "title": "Vintage Leather Bag",
+      "text": "Classic leather bag for a timeless look.",
+      "animation": "zoom-in",
+      "style": "fade-down",
+      "details": "Multiple compartments, adjustable strap.",
+      "price-range": "$80 - $120"
+    },
+    {
+      "id": 4,
+      "image": "product4.jpg",
+      "title": "Smart Home Thermostat",
+      "text": "Energy-efficient thermostat with smart features.",
+      "animation": "flip",
+      "style": "fade-down",
+      "details": "Programmable settings, smartphone control.",
+      "price-range": "$90 - $150"
+    },
+    {
+      "id": 5,
+      "image": "product5.jpg",
+      "title": "Fitness Tracker",
+      "text": "Track your steps, heart rate, and sleep patterns.",
+      "animation": "rotate",
+      "style": "Sporty",
+      "details": "Water-resistant, OLED display.",
+      "price-range": "$30 - $60"
+    },
+    {
+      "id": 6,
+      "image": "product6.jpg",
+      "title": "Retro Record Player",
+      "text": "Enjoy vintage music with a modern twist.",
+      "animation": "bounce",
+      "style": "Retro",
+      "details": "Bluetooth connectivity, built-in speakers.",
+      "price-range": "$120 - $200"
+    }
+  ]
