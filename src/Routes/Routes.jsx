@@ -6,6 +6,8 @@ import LogIn from "../Components/LogIn/LogIn";
 import Register from "../Components/Register/Register";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import Booking from "../Pages/Booking/Booking";
+import Blog from "../Pages/Blog/Blog";
+import Contact from "../Pages/Contact/Contact";
 
 const Routes = createBrowserRouter([
   {
@@ -35,6 +37,14 @@ const Routes = createBrowserRouter([
         element: <ViewDetails></ViewDetails>,
         loader:()=> fetch(`/data.json`)
       },
+      {
+        path: "/blog",
+        element: <Blog></Blog>
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>
+      }
     ],
   },
 ]);

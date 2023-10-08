@@ -1,5 +1,14 @@
-import { createContext } from "react";
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+/* eslint-disable react/prop-types */
+import { createContext, useEffect, useState } from "react";
+import {
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
 import app from "../../../Firebase/firebase.config";
 
 export const AuthContext = createContext(null);
@@ -7,12 +16,42 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
+
+  const [user, setUser] = useState()
+  // Google Sign In
   const googleSignIn = () => {
-return signInWithPopup()
+    return signInWithPopup(auth, provider);
   };
+  // New Sign Up
+  const signUp = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
+// Sign In
+  const signIn=(email,password)=>{
+    return signInWithEmailAndPassword(auth,email,password)
+  };
+
+
+  useEffect(()=>{
+
+    const subscribe = onAuthStateChanged(auth,(currentUser)=>{
+      setUser(currentUser)
+    });
+    return (()=>{
+      return subscribe()
+    });
+  },[]);
+
+  const logOut=()=>{
+    return signOut(auth);
+  }
 
   const AuthInfo = {
     googleSignIn,
+    signUp,
+    signIn,
+    user,
+    logOut,
   };
 
   return (

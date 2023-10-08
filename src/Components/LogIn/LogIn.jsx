@@ -1,12 +1,44 @@
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Hook/AuthProvider/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
+import swal from "sweetalert";
 
 const LogIn = () => {
-  const { googleLogIn } = useContext(AuthContext);
+  const { googleSignIn } = useContext(AuthContext);
+  const { signIn } = useContext(AuthContext);
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  // Google
+  const handleGoogle = () => {
+    googleSignIn().then((result) => {
+      console.log(result.user);
+    });
+  };
+
+  // Manual
+  const handleLogIn = (e) => {
+    e.preventDefault();
+    if (email && password) {
+      signIn(email, password)
+        .then((result) => {
+          console.log(result.user);
+
+          setEmail("");
+          setPassword("");
+          swal("Good job!", "Log In successfully!", "success");
+        })
+        .catch((err) => {
+          setError(err.massage);
+          swal("Error!", "Log In failed! Provide valid information", "error");
+        });
+    }
+  };
 
   useEffect(() => {
     AOS.init();
@@ -14,8 +46,10 @@ const LogIn = () => {
   }, []);
 
   return (
-    <div style={{backgroundImage: 'url(https://i.ibb.co/WKmDSRS/logo-08.png)'}}>
-      <div className="hero min-h-screen">
+    <div
+      style={{ backgroundImage: "url(https://i.ibb.co/WKmDSRS/logo-08.png)" }}
+    >
+      <div className="hero min-h-screen pt-24">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
             <h1
@@ -36,7 +70,10 @@ const LogIn = () => {
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
+                <p>{error}</p>
                 <input
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                   type="email"
                   placeholder="email"
                   className="input input-bordered shadow-lg"
@@ -48,6 +85,8 @@ const LogIn = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
+                  onChange={(e) => setPassword(e.target.value)}
+                  value={password}
                   type="password"
                   placeholder="password"
                   className="input input-bordered shadow-lg"
@@ -64,18 +103,24 @@ const LogIn = () => {
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                <button className="btn bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 hover:to-yellow-500 shadow-lg shadow-blue-600/50 text-white">
+                <button
+                  onClick={handleLogIn}
+                  className="btn bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 hover:to-yellow-500 shadow-lg shadow-blue-600/50 text-white"
+                >
                   Login
                 </button>
-                <button className="btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 shadow-lg shadow-blue-600/50 text-white mt-4">
-                  <FaGoogle></FaGoogle>Google
-                </button>
               </div>
+              <button
+                onClick={handleGoogle}
+                className="btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 shadow-lg shadow-blue-600/50 text-white mt-4"
+              >
+                <FaGoogle></FaGoogle>Google
+              </button>
               <p className="text-end mt-4">
-                If new please{" "}
-                <Link to="/register" className="text-blue-600 underline">
+                If new please
+                <Link to="/register" className="text-blue-600 underline ml-1">
                   Register
-                </Link>{" "}
+                </Link>
               </p>
             </form>
           </div>
