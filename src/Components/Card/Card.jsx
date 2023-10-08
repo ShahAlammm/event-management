@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
+
 
 const Card = ({ item }) => {
   const { id, image, title } = item || {};
@@ -36,7 +38,7 @@ const Card = ({ item }) => {
 
           <div className="mt-32 sm:mt-48 lg:mt-64">
             <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-80">
-              <button className="btn btn-primary">View details</button>
+              <Link to={`/item/${id}`}><button className="btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 shadow-lg shadow-blue-600/50 text-white">Details</button></Link>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../Hook/AuthProvider/AuthProvider";
+import { FaGoogle } from "react-icons/fa";
 
 const LogIn = () => {
   const { googleLogIn } = useContext(AuthContext);
@@ -14,11 +15,11 @@ const LogIn = () => {
 
   return (
     <div style={{backgroundImage: 'url(https://i.ibb.co/WKmDSRS/logo-08.png)'}}>
-      <div className="hero min-h-screen ">
+      <div className="hero min-h-screen">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
             <h1
-              className="text-5xl font-bold"
+              className="text-5xl font-bold font-Poppins"
               data-aos="fade-down"
               data-aos-duration="1000"
             >
@@ -67,7 +68,7 @@ const LogIn = () => {
                   Login
                 </button>
                 <button className="btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 shadow-lg shadow-blue-600/50 text-white mt-4">
-                  Google
+                  <FaGoogle></FaGoogle>Google
                 </button>
               </div>
               <p className="text-end mt-4">

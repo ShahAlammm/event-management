@@ -1,7 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
-import { FaUserCircle } from 'react-icons/fa'
+import { FaUserCircle } from "react-icons/fa";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { FaHome } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
+
 const NavBar = () => {
-  const navLink =
+
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
+  const navLink = (
     <>
       <li>
         <NavLink
@@ -10,25 +23,25 @@ const NavBar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-red-600 underline font-extrabold"
-              : ""
+              ? "text-red-600 text-2xl"
+              : "text-xl"
           }
         >
-          Home
+          <FaHome></FaHome>
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/about"
+          to="/booking"
           className={({ isActive, isPending }) =>
             isPending
               ? "pending"
               : isActive
-              ? "text-red-600 underline font-extrabold"
+              ? "text-red-500 underline font-extrabold"
               : ""
           }
         >
-          AboutUs
+          Booked
         </NavLink>
       </li>
       <li>
@@ -38,7 +51,7 @@ const NavBar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-red-600 underline font-extrabold"
+              ? "text-red-500 underline font-extrabold"
               : ""
           }
         >
@@ -52,18 +65,23 @@ const NavBar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-red-600 underline font-extrabold"
-              : ""
+              ? "text-red-500 text-2xl"
+              : "text-xl"
           }
         >
-          Contact
+          <FaPhone></FaPhone>
         </NavLink>
       </li>
     </>
+  );
 
   return (
     <div className="navbar pt-5">
-      <div className="navbar-start">
+      <div
+        data-aos="fade-down"
+        data-aos-duration="3000"
+        className="navbar-start"
+      >
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -88,14 +106,29 @@ const NavBar = () => {
             {navLink}
           </ul>
         </div>
-        <a className="normal-case"><img className="h-16" src="https://i.ibb.co/rp2Jymq/logo-8.png" alt="" /></a>
+        <a className="normal-case">
+          <img
+            className="h-16"
+            src="https://i.ibb.co/rp2Jymq/logo-8.png"
+            alt=""
+          />
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal font-bold px-1">{navLink}</ul>
       </div>
-      <div className="navbar-end gap-2">
-       <div className="text-3xl"><FaUserCircle></FaUserCircle></div>
-        <Link className="btn bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 hover:to-yellow-500 shadow-lg shadow-blue-600/50 text-white" to="/login">
+      <div
+        data-aos="fade-down"
+        data-aos-duration="3000"
+        className="navbar-end gap-2"
+      >
+        <div className="text-3xl">
+          <FaUserCircle></FaUserCircle>
+        </div>
+        <Link
+          className="btn bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 hover:to-yellow-500 shadow-lg shadow-blue-600/50 text-white"
+          to="/login"
+        >
           LogIn
         </Link>
       </div>

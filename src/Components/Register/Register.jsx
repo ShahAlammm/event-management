@@ -2,18 +2,19 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { FaGoogle } from "react-icons/fa";
 const Register = () => {
-
-    useEffect(() => {
-        AOS.init({
-          duration: 1000,
-        });
-        AOS.refresh();
-      }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+    AOS.refresh();
+  }, []);
 
   return (
-    <div style={{backgroundImage: 'url(https://i.ibb.co/WKmDSRS/logo-08.png)'}}>
+    <div
+      style={{ backgroundImage: "url(https://i.ibb.co/WKmDSRS/logo-08.png)" }}
+    >
       <div className="hero min-h-screen">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
@@ -78,7 +79,7 @@ const Register = () => {
                   Login
                 </button>
                 <button className="btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 shadow-lg shadow-blue-600/50 text-white mt-4">
-                  Google
+                  <FaGoogle></FaGoogle> Google
                 </button>
               </div>
               <p className="mt-4">

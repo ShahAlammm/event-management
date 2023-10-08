@@ -1,7 +1,18 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Banner = () => {
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div>
-      <div className="carousel w-full h-[600px]">
+      <div  data-aos="fade-up"
+              data-aos-duration="1000" className="carousel w-full h-[600px]">
         <div id="slide1" className="carousel-item relative w-full">
           <img src="https://i.ibb.co/3WrsFsj/img3.jpg" className="w-full" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
