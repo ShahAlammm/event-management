@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useContext, useEffect, useState } from "react";
@@ -14,10 +14,14 @@ const LogIn = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  const navigate = useNavigate();
+
   // Google
   const handleGoogle = () => {
     googleSignIn().then((result) => {
       console.log(result.user);
+      swal("Good job!", "Log In successfully!", "success");
+      navigate("/");
     });
   };
 
@@ -32,6 +36,7 @@ const LogIn = () => {
           setEmail("");
           setPassword("");
           swal("Good job!", "Log In successfully!", "success");
+          navigate("/");
         })
         .catch((err) => {
           setError(err.massage);

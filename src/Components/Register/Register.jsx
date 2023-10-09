@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // import { FaGoogle } from "react-icons/fa";
@@ -11,6 +11,8 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -30,11 +32,12 @@ const Register = () => {
           console.log(result.user);
           setEmail("");
           setPassword("");
+          swal("Good job!", "Register successfully!", "success");
+          navigate("/");
         })
         .catch((err) => {
           console.log(err);
         });
-      swal("Good job!", "Register successfully!", "success");
     }
   };
 

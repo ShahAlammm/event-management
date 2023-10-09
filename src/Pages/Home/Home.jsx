@@ -4,6 +4,7 @@ import Card from "../../Components/Card/Card";
 
 import Experience from "../../Components/Experience/Experience";
 import Footer from "../../Components/Footer/Footer";
+import WhyChooseUs from "../../Components/WhyChooseUs/WhyChooseUs";
 
 const Home = () => {
   const getData = useLoaderData([]);
@@ -46,6 +47,9 @@ const Home = () => {
       </div>
       <section>
         <Experience></Experience>
+      </section>
+      <section>
+        <WhyChooseUs></WhyChooseUs>
       </section>
       <section>
         <Footer></Footer>

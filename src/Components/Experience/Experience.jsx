@@ -16,7 +16,7 @@ const Experience = () => {
         style={{ backgroundImage: "url(https://i.ibb.co/WKmDSRS/logo-08.png)" }}
       >
         <div
-          className="text-left mt-24 mb-60"
+          className="text-left mt-24 mb-20"
           data-aos="fade-left"
           data-aos-duration="2000"
         >
