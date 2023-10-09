@@ -8,6 +8,7 @@ import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import Booking from "../Pages/Booking/Booking";
 import Blog from "../Pages/Blog/Blog";
 import Contact from "../Pages/Contact/Contact";
+import PrivateRoute from "../Components/Hook/PrivateRoute/PrivateRoute";
 
 const Routes = createBrowserRouter([
   {
@@ -30,21 +31,33 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/booking",
-        element: <Booking></Booking> ,
+        element: (
+          <PrivateRoute>
+            <Booking></Booking>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/item/:id",
-        element: <ViewDetails></ViewDetails>,
-        loader:()=> fetch(`/data.json`)
+        element: (
+          <PrivateRoute>
+            <ViewDetails></ViewDetails>
+          </PrivateRoute>
+        ),
+        loader: () => fetch(`/data.json`),
       },
       {
         path: "/blog",
-        element: <Blog></Blog>
+        element: <Blog></Blog>,
       },
       {
         path: "/contact",
-        element: <Contact></Contact>
-      }
+        element: (
+          <PrivateRoute>
+            <Contact></Contact>
+          </PrivateRoute>
+        ),
+      },
     ],
   },
 ]);

@@ -1,62 +1,50 @@
 [
-    {
-      "id": 1,
-      "image": "product1.jpg",
-      "title": "Modern Desk Chair",
-      "text": "Ergonomic design for maximum comfort.",
-      "animation": "slide-in",
-      "style": "fade-down",
-      "detail": "Adjustable height, 360-degree swivel.",
-      "price": "100"
-    },
-    {
-      "id": 2,
-      "image": "product2.jpg",
-      "title": "Smartphone Stand",
-      "text": "Stylish holder for your mobile devices.",
-      "animation": "fade-in",
-      "style": "fade-down",
-      "detail": "Compatible with various phone sizes.",
-      "price": "20"
-    },
-    {
-      "id": 3,
-      "image": "product3.jpg",
-      "title": "Vintage Leather Bag",
-      "text": "Classic leather bag for a timeless look.",
-      "animation": "zoom-in",
-      "style": "fade-down",
-      "detail": "Multiple compartments, adjustable strap.",
-      "price": "120"
-    },
-    {
-      "id": 4,
-      "image": "product4.jpg",
-      "title": "Smart Home Thermostat",
-      "text": "Energy-efficient thermostat with smart features.",
-      "animation": "flip",
-      "style": "fade-down",
-      "detail": "Programmable settings, smartphone control.",
-      "price": "150"
-    },
-    {
-      "id": 5,
-      "image": "product5.jpg",
-      "title": "Fitness Tracker",
-      "text": "Track your steps, heart rate, and sleep patterns.",
-      "animation": "rotate",
-      "style": "Sporty",
-      "detail": "Water-resistant, OLED display.",
-      "price": "60"
-    },
-    {
-      "id": 6,
-      "image": "product6.jpg",
-      "title": "Retro Record Player",
-      "text": "Enjoy vintage music with a modern twist.",
-      "animation": "bounce",
-      "style": "Retro",
-      "detail": "Bluetooth connectivity, built-in speakers.",
-      "price": "200"
-    }
-  ]
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/ydZxbjX/wedd-4.jpg",
+    "title": "Wedding Celebration",
+    "text": "Basic wedding planning services: $2,000 - $5,000 .Full-service wedding planning (including venue selection, decorations, coordination): $5,000 - $15,000 and above.",
+    "style": "Win the wedding of your dreams! Enter now for a chance to enjoy a curated venue and enchanting decorations.",
+    "detail": "Our wedding services are designed to turn your special day into a seamless and memorable experience. From meticulous planning to flawless execution, we handle every detail, ensuring that your wedding reflects your unique style and vision. Our team is dedicated to creating an enchanting atmosphere that celebrates the love between you and your partner.Immerse yourself in the magic of your wedding day at stunning venues tailored to your dream vision. Our wedding services include exquisite decorations, transforming your chosen space into a fairy-tale setting that perfectly complements your unique style and theme."
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/p1yf6y4/birth-2.jpg",
+    "title": "Birthday Parties",
+    "text": "Small to medium-sized gatherings: $500 - $2,000. Larger or more elaborate parties with custom decorations: $2,000 - $5,000 and above.",
+    "style": "Celebrate in style! Enter to win a birthday bash, complete with a fantastic venue and personalized decorations.",
+    "detail": "Celebrate another year of life with a birthday party that's as unique as you are! Whether it's a milestone birthday or an intimate gathering with friends, our birthday party services cover everything from theme selection to entertainment coordination. Let us take care of the details so you can focus on enjoying the festivities and creating cherished memories.Choose from a variety of venues that match the vibe of your birthday celebration, whether it's an intimate gathering at home or a lively bash at a chic venue. Our birthday party services also cover eye-catching decorations, ensuring your chosen space is filled with festive flair and personalized touches."
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/rkZ8S07/nwe-ann.webp",
+    "title": "Anniversaries",
+    "text": "Intimate anniversary celebrations: $1,000 - $3,000. Larger anniversary events with specialized decorations: $3,000 - $8,000 and above.",
+    "style": "Make your anniversary unforgettable! Enter for a chance to win a romantic celebration with a carefully selected venue and exquisite decorations.",
+    "detail": "Commemorate the journey of love with a thoughtfully planned anniversary celebration. Our services are tailored to capture the essence of your relationship, offering a perfect blend of romance and nostalgia. From venue selection to personalized touches, we ensure that your anniversary is a beautiful reflection of the years you've spent together.Celebrate your journey of love in elegant venues adorned with romantic decorations. Our anniversary services include meticulous attention to detail in creating an atmosphere that reflects the depth of your connection, with personalized décor that captures the essence of your years together."
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/pxjbqSb/enge-3.jpg",
+    "title": "Engagement Parties",
+    "text": "Basic engagement party planning services: $1,000 - $3,000. Full-service engagement party planning with venue and decor: $3,000 - $7,000 and above.",
+    "style": "Begin your journey with a bang! Enter our contest to win a dream engagement party decorations.",
+    "detail": "Kick off your journey to marital bliss with an engagement party that sets the tone for the exciting times ahead. Our engagement party services include venue decoration, entertainment coordination, and a focus on creating an atmosphere filled with joy and anticipation. Let us help you celebrate this significant moment with style and flair.Toast to your love story in carefully selected venues that provide the perfect backdrop for your engagement party. Our services extend to creating a romantic ambiance with decorations that highlight the joyous occasion, setting the stage for a celebration that radiates love and excitement."
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/QkTFmR8/ret.png",
+    "title": "Retirement Parties",
+    "text": "Simple retirement party planning services: $800 - $2,500. Comprehensive retirement party planning with venue and themed decor: $2,500 - $6,000 and above.",
+    "style": "Honor a career well spent! Enter now to win a retirement party, complete with a fitting venue and thoughtful decorations.",
+    "detail": "Honor the achievements and milestones of a well-deserving retiree with a retirement party that reflects their personality and accomplishments. Our services cover every aspect of planning, from venue selection to creating a program that pays tribute to the retiree's legacy. Make the transition to retirement memorable and joyous with our expert event management.Honor the retiree in venues designed to accommodate the significance of the moment. Our retirement party services include thoughtful decorations that celebrate achievements and milestones, creating an environment where guests can reminisce and express their well wishes."
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/K0NC6zL/baby-last.jpg",
+    "title": "Baby Shower",
+    "text": "Basic baby shower planning services: $800 - $2,500. Elaborate baby shower planning with custom decorations: $2,500 - $5,000 and above.",
+    "style": "Celebrate the new addition! Enter for a chance to win a heartwarming baby shower, featuring a cozy venue and adorable decorations.",
+    "detail": "Welcome the newest member of your family with a baby shower that radiates love and joy. Our baby shower services encompass theme development, venue decoration, and coordination of activities to ensure a heartwarming celebration. Let us take care of the details so you can focus on the excitement of welcoming your little one into the world.Welcome the newest addition to your family in charming venues complemented by delightful decorations. Our baby shower services encompass venue selection that suits your preferences and adorable decorations that enhance the joyous atmosphere, making your celebration truly heartwarming."
+  }
+]

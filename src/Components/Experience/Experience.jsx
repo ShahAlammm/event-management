@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Hero from "./Hero/Hero";
 
 const Experience = () => {
   useEffect(() => {
@@ -19,9 +20,10 @@ const Experience = () => {
           data-aos="fade-left"
           data-aos-duration="2000"
         >
-          <h1 className="text-6xl font-bold font-Poppins bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+          <h1 className="text-6xl mb-10 font-bold font-Poppins bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
             Our Experience
           </h1>
+          <Hero></Hero>
         </div>
       </div>
     </div>

@@ -1,9 +1,50 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+
+const spanStyle = {
+  padding: "20px",
+  background: "#efefef",
+  color: "#000000",
+};
+
+const divStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundSize: "cover",
+  height: "800px",
+};
+const slideImages = [
+  {
+    url: "https://i.ibb.co/WVBh5Nb/banner-1.jpg",
+    caption: "",
+  },
+  {
+    url: "https://i.ibb.co/yNC4BH5/bann-3.jpg",
+    caption: "",
+  },
+  {
+    url: "https://i.ibb.co/GfDPKhg/ban-6.jpg",
+    caption: "",
+  },
+  {
+    url: "https://i.ibb.co/B2T1K0S/banner-3.webp",
+    caption: "",
+  },
+  {
+    url: "https://i.ibb.co/NSHQ9MT/banner-2.webp",
+    caption: "",
+  },
+  {
+    url: "https://i.ibb.co/1MVksDg/bann-4.jpg",
+    caption: "",
+  },
+];
 
 const Banner = () => {
-
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -11,51 +52,22 @@ const Banner = () => {
 
   return (
     <div>
-      <div  data-aos="fade-up"
-              data-aos-duration="1000" className="carousel w-full h-[600px]">
-        <div id="slide1" className="carousel-item relative w-full">
-          <img src="https://i.ibb.co/3WrsFsj/img3.jpg" className="w-full" />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide4" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide2" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide2" className="carousel-item relative w-full">
-          <img src="https://i.ibb.co/3WrsFsj/img3.jpg" className="w-full" />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide1" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide3" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide3" className="carousel-item relative w-full">
-          <img src="https://i.ibb.co/3WrsFsj/img3.jpg" className="w-full" />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide2" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide4" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide4" className="carousel-item relative w-full">
-          <img src="https://i.ibb.co/3WrsFsj/img3.jpg" className="w-full" />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide3" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide1" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
+      <div data-aos="fade-down" data-aos-duration="2000">
+        <div className="slide-container">
+          <Slide>
+            {slideImages.map((slideImage, index) => (
+              <div key={index}>
+                <div
+                  style={{
+                    ...divStyle,
+                    backgroundImage: `url(${slideImage.url})`,
+                  }}
+                >
+                  {/* <span style={spanStyle}>{slideImage.caption}</span> */}
+                </div>
+              </div>
+            ))}
+          </Slide>
         </div>
       </div>
     </div>

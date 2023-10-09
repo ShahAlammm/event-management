@@ -118,7 +118,7 @@ const NavBar = () => {
             alt=""
           />
         </a>
-        <p className="text-xl font-extrabold font-serif bg-gradient-to-r from-green-500 to-blue-500 hover:from-pink-500 hover:to-yellow-500 inline-block text-transparent bg-clip-text">
+        <p className="text-xl font-extrabold font-serif ">
           ST<span className="text-red-500">@</span>R EVENT
         </p>
       </div>

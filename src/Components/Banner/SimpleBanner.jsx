@@ -11,50 +11,45 @@ const SimpleBanner = () => {
 
   return (
     <div>
-      <Marquee pauseOnHover speed={100}>
+      <Marquee pauseOnHover speed={120}>
         <div>
           <img
-            className="h-96 w-80"
-            src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+            className="h-[600px] w-[400px]"
+            src="https://i.ibb.co/4Prx1d4/wedd-6.jpg"
           />
         </div>
         <div>
           <img
-            className="h-96 w-80"
-            src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+            className="h-[600px] w-[400px]"
+            src="https://i.ibb.co/ySqZ10W/birth-5.jpg"
           />
         </div>
         <div>
           <img
-            className="h-96 w-80"
-            src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+            className="h-[600px] w-[500px]"
+            src="https://i.ibb.co/qY17RB5/baby-2.jpg"
           />
         </div>
         <div>
           <img
-            className="h-96 w-80"
-            src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+            className="h-[600px] w-[700px]"
+            src="https://i.ibb.co/ydZxbjX/wedd-4.jpg"
           />
         </div>
         <div>
           <img
-            className="h-96 w-80"
-            src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+            className="h-[600px] w-[400px]"
+            src="https://i.ibb.co/JBLTFq7/retire-2.jpg"
           />
         </div>
         <div>
           <img
-            className="h-96 w-80"
-            src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+            className="h-[600px] w-[400px]"
+            src="https://i.ibb.co/hLMpnr1/babt-3.jpg"
           />
         </div>
       </Marquee>
-      <div className="text-center" data-aos="fade-up" data-aos-duration="3000">
-        <h1 className="text-7xl font-bold mt-24 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
-          Our Services
-        </h1>
-        <p className="text-lg mt-5 text-black">We can </p>
-      </div>
+
     </div>
   );
 };

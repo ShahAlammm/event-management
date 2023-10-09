@@ -63,7 +63,7 @@ const Register = () => {
             data-aos="fade-down"
             data-aos-duration="800"
           >
-            <form className="card-body">
+            <form className="card-body text-black font-bold">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
