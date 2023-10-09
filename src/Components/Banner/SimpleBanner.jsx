@@ -49,7 +49,6 @@ const SimpleBanner = () => {
           />
         </div>
       </Marquee>
-
     </div>
   );
 };

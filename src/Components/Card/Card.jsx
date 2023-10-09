@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 const Card = ({ item }) => {
   const { id, image, title, style } = item || {};
 

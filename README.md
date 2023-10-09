@@ -1,8 +1,47 @@
-# React + Vite
+# Social Event Management Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Welcome to the Social Event Management Website! This web application is designed to help users manage and plan various social events such as weddings, birthday parties, anniversaries, engagement parties, retirement parties, and baby showers. Users can explore different event categories, view details, and book events.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+### 1. Event Categories
+
+- **Weddings**
+- **Birthday Parties**
+- **Anniversaries**
+- **Engagement Parties**
+- **Retirement Parties**
+- **Baby Showers**
+
+### 2. Event Cards
+
+Each event category is represented by a card on the homepage. Each card includes:
+
+- Event Name
+- Event Description
+- Details Button
+
+### 3. Authentication
+
+- **Login:** Users can log in to access additional features.
+- **Register:** New users can register to create an account.
+
+### 4. Details Page
+
+- Users can view detailed information about an event by clicking the "Details" button on the event card.
+- Access to the details page is restricted to logged-in users.
+
+### 5. Booking
+
+- On the details page, users can book the event.
+- The booking feature is available to logged-in users.
+
+## Getting Started
+
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
