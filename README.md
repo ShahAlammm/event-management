@@ -38,6 +38,13 @@ Each event category is represented by a card on the homepage. Each card includes
 - On the details page, users can book the event.
 - The booking feature is available to logged-in users.
 
+  ## Uses Technology
+
+- **React**
+- **HTML5**
+- **Tailwind css**
+- **Vite**
+
 ## Getting Started
 
 To run the project locally, follow these steps:
